@@ -146,14 +146,7 @@ section .section-title:after {
   display: block;
 }
 
-a {
-  text-decoration: none;
-  outline: 0;
-}
 
-button {
-  outline: 0;
-}
 
 svg.feather, i {
   font-size: 14px;
@@ -1176,17 +1169,6 @@ footer {
 }
 
 /** 2.16 Table **/
-.table td, .dataTable-table td, .table thead th, .dataTable-table thead th {
-  vertical-align: middle;
-}
-
-.table thead th, .dataTable-table thead th {
-  border-bottom: 2px solid #475F7B;
-}
-
-.dataTable-container {
-  overflow-x: auto;
-}
 
 /** 2.17 Progress **/
 .progress.progress-primary {
@@ -1523,16 +1505,19 @@ footer {
   font-size: 3rem;
 }
 .delete{
+  margin: 0;
   padding: 5px;
   color:#fff;
   background-color: #ff006e;
 }
 .edit{
+  margin: 0;
   padding: 5px;
   color: #fff;
   background-color: #f77f00;
 }
 .view{
+  margin: 0;
   padding: 5px;
   color: #fff;
   background-color: #00b300;

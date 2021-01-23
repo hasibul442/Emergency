@@ -9,15 +9,7 @@
 <script src="{{asset('assets/js/main.js')}}"></script>
 {{--<script src="{{asset('assets/js/vendors.js')}}"></script>--}}
 
-<script>
-    $(document).ready(function() {
-        $('#table2').DataTable({
-            "scrollX": true,
-            responsive:true,
-        });
-    });
 
-</script>
 </body>
 
 </html>

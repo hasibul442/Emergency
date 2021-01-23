@@ -73,5 +73,15 @@
         </div>
 
     </div>
+    <script>
+    $(document).ready(function() {
+        $('#table2').DataTable({
+            "autoWidth": false,
+            scrollX:true,
+            responsive:true,
+        });
+    });
+
+</script>
 
 @endsection

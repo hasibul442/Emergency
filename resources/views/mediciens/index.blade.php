@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <table class="table nowrap table-striped table-sm" id="table2">
+                <table class="table table-striped table-sm" id="table2">
 
                     <thead>
                         <tr>
@@ -16,8 +16,6 @@
                             <th class="th-sm">Company</th>
                             <th class="th-sm">Price (tk)</th>
                             <th class="th-sm">View</th>
-                            <th class="th-sm">Edit</th>
-                            <th class="th-sm">Delete</th>
                         </tr>
                     </thead>
 
@@ -32,21 +30,26 @@
                                 <td>{{ $medicine->company }}</td>
                                 <td>{{ $medicine->price }}</td>
                                 <td>
-                                    <div class="text-right">
-                                        <a class="btn view" href="{{ route('medicines.show', $medicine->id) }}"><i class="fas fa-info"></i></a>
+                                    <div class="row">
+                                        <div class="col-4">
+                                             <div class="text-right">
+                                                <a class="btn view m-0" href="{{ route('medicines.profile', $medicine->id) }}"><i class="fas fa-info"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="text-right">
+                                                <a class="btn edit m-0" href="{{route('medicines.edit', $medicine->id)}}"><i class="fas fa-pencil-alt"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <form action="{{ route('medicines.destroy', $medicine->id) }}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn delete m-0"><i class="fas fa-trash"></i></button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="text-right">
-                                        <a class="btn edit" href="{{route('medicines.edit', $medicine->id)}}"><i class="fas fa-pencil-alt"></i></a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <form action="{{ route('medicines.destroy', $medicine->id) }}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn delete"><i class="fas fa-trash"></i></button>
-                                    </form>
+ 
                                 </td>
                             </tr>
                         @endforeach
@@ -58,4 +61,19 @@
             </div>
         </div>
     </div>
+    <script>
+    $(document).ready(function() {
+        $('#table2').DataTable({
+            "autoWidth": false,
+            
+            responsive: {
+        details: false
+    },
+    scrollX:true,
+    scrollCollapse: true
+        });
+        
+    });
+
+</script>
 @endsection
