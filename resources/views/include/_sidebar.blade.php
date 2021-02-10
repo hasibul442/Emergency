@@ -155,6 +155,6 @@
                 </li>
             </ul>
         </div>
-        <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+        <button class="sidebar-toggler btn x"><i class="fas fa-arrow-left"></i></button>
     </div>
 </div>

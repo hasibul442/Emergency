@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                <table class="display nowrap" id="table2"style="width:100%">
+                <table class="table" id="table2"style="width:100%">
 
                     <thead>
                         <tr>
@@ -61,14 +61,12 @@
         </div>
 
     </div>
-<script>
-    $(document).ready(function() {
-        $('#table2').DataTable({
-            "autoWidth": false,
-            scrollX:true,
-            responsive:true,
-        });
+    <script>
+$(document).ready(function() {
+    $('#table2').DataTable({
+        "paging": true,
     });
 
+});
 </script>
 @endsection
