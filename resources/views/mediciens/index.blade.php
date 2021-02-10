@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <table class="table table-striped table-sm" id="table2">
+                <table class="table" id="table2">
 
                     <thead>
                         <tr>
@@ -62,18 +62,11 @@
         </div>
     </div>
     <script>
-    $(document).ready(function() {
-        $('#table2').DataTable({
-            "autoWidth": false,
-            
-            responsive: {
-        details: false
-    },
-    scrollX:true,
-    scrollCollapse: true
-        });
-        
+$(document).ready(function() {
+    $('#table2').DataTable({
+        "paging": true,
     });
 
+});
 </script>
 @endsection
